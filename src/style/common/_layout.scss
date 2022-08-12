@@ -1,0 +1,246 @@
+﻿.clayout {
+    &-default {
+        @apply flex flex-col justify-center items-center;
+        height: 100%;
+        width: 100%;
+    }
+
+    &-user {
+        @apply relative w-full h-full;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &-content {
+            @apply relative flex flex-col h-full;
+            transition: all .5s ease-in;
+
+            &-navbar {
+                @apply fixed flex flex-row items-center justify-between ctext-bg-white core-shadow-small w-full;
+                padding: 0 8rem;
+                z-index:5;
+                @media (max-width:$mediaXs) {
+                    & {
+                        padding: 0 2rem;
+                    }
+                }
+
+                min-height: 6rem;
+                top: 0;
+            }
+
+            &-body {
+                margin: 4rem auto;
+                width: 90%;
+
+            }
+        }
+
+        &-sidebar {
+            width: 20rem;
+            @apply fixed ctext-bg-primary h-full flex flex-col;
+            z-index: 1000000;
+            transition: all 1s linear;
+
+            &-header {
+                @apply flex flex-row items-center core-gap-2;
+            }
+
+            &-content {
+                @apply flex flex-col justify-between grow;
+                overflow: auto;
+            }
+
+            &-parent {
+                transition: all .5s ease-in;
+                @apply mb-10 relative;
+
+                &-img {
+                    transition: all .5s ease-in;
+                    @apply object-contain;
+                }
+            }
+
+            &-child {
+                transition: all .5s ease-in;
+                @apply list-none flex flex-col core-gap-1 px-10 my-5;
+
+                &-item {
+                    transition: all .5s ease-in;
+                    min-height: 2rem;
+                    padding: .5rem;
+
+                    &:hover {
+                        background-color: rgba(0,0,0,.5);
+                        border-radius: 10rem;
+                    }
+                }
+            }
+        }
+
+        &-profile {
+            @apply flex flex-row items-center justify-center core-gap-2;
+
+            @media (max-width:$mediaXs) {
+                & {
+                    justify-content: space-between;
+                }
+            }
+
+            &-note {
+                @apply relative;
+
+                & span {
+                    @apply absolute ctext-bg-danger select-none p-2 flex items-center justify-center ctext-white;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    border-radius: 50%;
+                    font-size: .6rem;
+                    top: -.2rem;
+                    right: 0;
+                }
+            }
+
+            &-box {
+                @apply flex flex-row items-center justify-center;
+
+                &-frame {
+                    @apply ctext-bg-lighter core-shadow-large;
+                    border-radius: 50rem;
+                    overflow: hidden;
+                    height: 3rem;
+                    width: 3rem;
+                    background-position: center center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            &-container {
+                @apply relative;
+
+                &-controls {
+                    @apply flex flex-row justify-between items-center select-none;
+
+                    & img {
+                        transition: all .5s ease-out;
+                    }
+                }
+
+                &-items {
+                    @apply absolute list-none p-0 m-0 ctext-bg-white core-shadow-large;
+                    width: 100%;
+                    top: 2.5rem;
+                    border: .1rem solid var(--lighter);
+
+                    & > li {
+                        @apply p-2 select-none;
+                        cursor: pointer;
+                        transition: all .5s ease-in;
+                    }
+
+                    & > li:hover {
+                        @apply font-bold ctext-black;
+                    }
+
+                    & > li:first-child {
+                        border-bottom: .1rem solid var(--gray);
+                    }
+                }
+            }
+        }
+
+        &-cover {
+            @apply fixed w-full h-full;
+            background-color: rgba(0,0,0,.3);
+            top: 0;
+            left: 0;
+            z-index:100;
+            bottom: 0;
+        }
+
+        &-links {
+
+            @media (max-width:$mediaXs) {
+                & {
+                    @apply hidden;
+                }
+            }
+        }
+    }
+
+    &-unActive {
+        animation-duration: .8s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+
+        &-left {
+            animation-name: sideLeftAnimate;
+        }
+
+        &-right {
+            animation-name: sideRightAnimate;
+        }
+    }
+
+    &-container {
+        @apply relative ctext-bg-white w-full h-full p-5 mb-3 core-shadow-large;
+
+        &-right {
+            &:before {
+                content: '';
+                @apply absolute ctext-bg-primary right-0;
+                width: 12rem;
+                height: .2rem;
+                top: 0;
+            }
+        }
+
+        &-left {
+            &:before {
+                content: '';
+                @apply absolute ctext-bg-primary left-0;
+                width: 12rem;
+                height: .2rem;
+                top: 0;
+            }
+        }
+    }
+
+    @keyframes sideLeftAnimate {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: -18.5rem;
+        }
+    }
+
+    @keyframes sideRightAnimate {
+        from {
+            right: 0;
+        }
+
+        to {
+            right: -18.5rem;
+        }
+    }
+}
+
+
+.menu-btn {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    z-index: 10;
+    top: 1rem;
+    @apply drop-shadow-lg flex items-center justify-center ctext-bg-white absolute select-none;
+    cursor: pointer;
+    & img {
+        @apply object-contain;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+
+

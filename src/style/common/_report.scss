@@ -1,0 +1,17 @@
+.report{
+    @apply p-4;
+    &-header{
+        @apply flex flex-col core-gap-1 justify-center items-center;
+        @media screen {
+            display: none;
+        }
+    }
+    @media screen {
+        display: none;
+    }
+    @media print {
+        &-table{
+            @apply p-4;
+        }
+    }
+}

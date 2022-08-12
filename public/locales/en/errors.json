@@ -1,0 +1,32 @@
+{
+  "page_not_found": "Page not found",
+  "page_not_found_message": "Sorry, we could not find the page you requested.",
+  "field_required": "Field is required",
+  "unexpected_errer": "An unexpected problem occurred",
+  "empty_field": "Mandatory field",
+  "min_input_field": "The field length must be at least {#limit}",
+  "max_input_field": "Field length must be greater than or equal to {#limit}",
+  "type_input_field": "The data format does not match the field type",
+  "email_input_field": "The email format is incorrect",
+  "flag_length_field": "The input field value must be {#limit} length",
+  "matched_input_field": "Both fields do not match",
+  "flag_input_field": "The entered data does not match the specified pattern",
+  "file_input_field": "File format is not accepted",
+  "password-not-matched": "Both password not matched",
+  "file_max_input_field": "The file size has exceeded the required limit {#limit}",
+  "date_input_field": "Incorrect date format",
+  "number_input_field": "The number format is incorrect",
+  "number_pos_input_field": "The number must be positive",
+  "number_min_input_field": "The number must not be less than {#limit}",
+  "number_max_input_field": "The number must not be more than {#limit}",
+  "message_sent_successfully": "Message was sent successfully",
+  "wrong_code": "Wrong validation code",
+  "email_not_registered": "Email is not existing",
+  "wrong_code_server": "An error occurred while sending the verification code",
+  "success_send_code": "The code has been sent successfully",
+  "wrong_data_access": "Wrong data access",
+  "wrong_reset_password": "An error occurred while setting the password",
+  "failure_loading_data":"Something wrong happened once loading data"
+
+
+}

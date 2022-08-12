@@ -1,0 +1,39 @@
+﻿.cinput {
+    @apply flex mb-5 flex-col;
+
+    &-label {
+        @apply ctext-black mb-2 select-none;
+    }
+
+    &-field {
+        min-height: 40px;
+        border-style: none;
+        border-radius: .2rem;
+        outline: .1rem solid hsl(0, 0%, 80%);
+        @apply p-2 ctext-font-1;
+    }
+
+    &-error {
+        @apply mt-2 block ctext-font-1 ctext-danger;
+    }
+
+    &-multi {
+        min-height: 10rem;
+        max-height: 10rem;
+        border: .1rem solid hsl(0, 0%, 80%);
+
+        & option {
+            background-color: var(--optional);
+        }
+
+    }
+}
+
+select[multiple]:focus option:checked {
+    background: var(--secondary) linear-gradient(0deg, var(--secondary) 0%, var(--secondary) 100%);
+}
+
+select[multiple] option:checked {
+    background: var(--secondary) linear-gradient(0deg, var(--secondary) 0%, var(--secondary) 100%);
+}
+

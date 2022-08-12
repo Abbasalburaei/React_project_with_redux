@@ -1,0 +1,102 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap");
+@import "./mediaQuery";
+@import "./vars";
+* {
+    font-family: "Almarai", sans-serif;
+    box-sizing:border-box;
+}
+
+.ctext {
+
+    &-primary {
+        color: var(--primary);
+    }
+
+    &-black {
+        color: var(--black);
+    }
+
+    &-white {
+        color: var(--white);
+    }
+
+    &-warning {
+        color: var(--warning);
+    }
+
+    &-danger {
+        color: var(--danger);
+    }
+
+    &-secondary {
+        color: var(--secondary);
+    }
+
+    &-success {
+        color: var(--success);
+    }
+
+    &-optional {
+        color: var(--optional);
+    }
+
+    &-gray {
+        color: var(--gray);
+    }
+
+    &-bg {
+        &-primary {
+            background-color: var(--primary);
+        }
+
+        &-black {
+            background-color: var(--black);
+        }
+
+        &-white {
+            background-color: var(--white);
+        }
+
+        &-warning {
+            background-color: var(--warning);
+        }
+
+        &-danger {
+            background-color: var(--danger);
+        }
+
+        &-secondary {
+            background-color: var(--secondary);
+        }
+
+        &-success {
+            background-color: var(--success);
+        }
+
+        &-optional {
+            background-color: var(--optional);
+        }
+
+        &-gray {
+            background-color: var(--gray);
+        }
+
+        &-lighter {
+            background-color: var(--lighter);
+        }
+    }
+
+
+
+    @each $key,$value in $sizes {
+        &-font-#{$key} {
+            font-size: $value;
+        }
+
+        @media screen and (max-width:$mediaSm) {
+            &-font-#{$key} {
+                font-size: map-get($sizes,ceil($key / 2));
+            }
+        }
+    }
+}

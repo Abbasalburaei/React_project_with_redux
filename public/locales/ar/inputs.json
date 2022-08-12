@@ -1,0 +1,13 @@
+{
+  "email": "البريد الالكتروني",
+  "password": "كلمة المرور",
+  "remember_me": "تذكرني",
+  "send": "ارسال",
+  "save": "حفظ",
+  "edit": "تعديل",
+  "sign_in": "دخول",
+  "next": "التالي",
+  "validation_code": "كود التحقق",
+  "new_password": "كلمة المرور الجديدة",
+  "confirm_password": "تأكيد كلمة المرور"
+}

@@ -1,0 +1,134 @@
+﻿@import "./colors";
+@import "./vars";
+@import "./text";
+@import "./mediaQuery";
+
+//common scss files
+@import "../common/layout";
+@import "../common/inputs";
+@import "../common/dropdown";
+@import "../common/btn";
+@import "../common/popup";
+@import "../common/statistic";
+@import "../common/report";
+.core {
+    &-shadow {
+        &-small {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        &-large {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        }
+    }
+
+    &-line {
+        height: .1rem;
+        margin: 1rem auto;
+
+        &-vertical {
+            width: .1rem;
+            height: 1.5rem;
+        }
+    }
+
+    &-line-slim {
+        height: unquote(calc(.1 / 2) + 'rem');
+        margin: 1rem auto;
+    }
+
+    &-border-radius {
+        border-radius: .5rem;
+    }
+
+    &-border {
+        border-style: solid;
+        border-width: .2rem;
+
+        &-lighter {
+            border-color: var(--lighter);
+        }
+
+        &-primary {
+            border-color: var(--primary);
+        }
+
+        &-optional {
+            border-color: var(--optional);
+        }
+
+        &-secondary {
+            border-color: var(--secondary);
+        }
+        &-black {
+            border-color: var(--black);
+        }
+        &-danger {
+            border-color: var(--danger);
+        }
+        &-success {
+            border-color: var(--success);
+        }
+        &-warning {
+            border-color: var(--warning);
+        }
+
+        &-rtl {
+            border-right-width: .2rem;
+        }
+
+        &-ltr {
+            border-left-width: .2rem;
+        }
+
+        &-top {
+            border-top-width: .2rem;
+        }
+
+        &-bottom {
+            border-bottom-width: .2rem;
+        }
+    }
+
+    &-lang {
+        &-rtl {
+            direction: rtl;
+            text-align: right;
+        }
+
+        &-ltr {
+            direction: ltr;
+            text-align: left;
+        }
+    }
+
+    &-tabs {
+        @apply list-none p-0 m-0 flex flex-row core-gap-1;
+
+        & > li {
+            height: 3rem;
+            min-width: 5rem;
+            @apply flex justify-center items-center ctext-black ctext-font-1 text-center ctext-bg-gray core-shadow-large;
+            transition: all .5s ease;
+
+            &:hover {
+                transform: translateY(1rem);
+            }
+
+            & > a {
+                @apply ctext-black w-full h-full p-2;
+            }
+        }
+
+        &-active {
+            @apply ctext-bg-primary;
+            color: var(--white) !important;
+        }
+    }
+
+    @each $key,$value in $sizes {
+        &-gap-#{$key} {
+            gap: unquote(calc($key / 2) + 'rem');
+        }
+    }
+}

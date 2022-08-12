@@ -1,0 +1,13 @@
+{
+  "email": "Email",
+  "password": "Password",
+  "remember_me": "Remember me",
+  "send": "Send",
+  "save": "Save",
+  "edit": "Edit",
+  "sign_in": "Login",
+  "next": "Next",
+  "validation_code": "Validation code",
+  "new_password": "New password",
+  "confirm_password": "Confirm password"
+}

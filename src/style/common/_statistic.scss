@@ -1,0 +1,7 @@
+.statistic{
+    @apply w-full core-shadow-small mb-2 flex flex-col core-gap-1 p-3 ctext-bg-white;
+    border-radius: .2rem;
+    &-content{
+        @apply ctext-font-2;
+    }
+}
